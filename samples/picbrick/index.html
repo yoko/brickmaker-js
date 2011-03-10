@@ -10,9 +10,9 @@
 	<link rel="stylesheet" href="picbrick.css">
 	<script src="http://ajax.microsoft.com/ajax/jquery/jquery-1.5.1.min.js"></script>
 	<script src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
+	<script src="lib/jquery.picplz.js"></script>
 	<script src="jquery.autopagerevent.js"></script>
 	<script src="brickmaker.js"></script>
-	<script src="jquery.picplz.js"></script>
 	<script src="picbrick.js"></script>
 </head>
 <body>
@@ -38,14 +38,14 @@
 
 <footer>
 	<p>&copy; 2011 <a href="http://flavours.me/yksk">@yksk</a></p>
-	<p>made with <a href="http://dummy/">brickmaker.js and jquery.autopagerevent.js</a></a></p>
+	<p>made with <a href="https://github.com/yoko/brickmaker-js">brickmaker.js and jquery.autopagerevent.js</a></a></p>
 </footer>
 
 <div id="loading"></div>
 
 <script id="template-pic" type="text/x-jquery-tmpl">
 <li style="width:{{= width}}px; height:{{= height}}px">
-<a href="http://picplz.com{{= url}}" target="_blank"><img src="{{= img_url}}" width="{{= width}}" height="{{= height}}"/></a>
+<a href="http://picplz.com{{= url}}"><img src="{{= img_url}}" width="{{= width}}" height="{{= height}}"/></a>
 </li>
 </script>
 </body>
