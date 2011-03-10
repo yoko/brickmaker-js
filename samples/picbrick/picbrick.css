@@ -11,10 +11,6 @@ body {
 	padding: 0;
 }
 
-html {
-	overflow-y: scroll;
-}
-
 body {
 	margin: 50px 0 50px 100px;
 	font: 12px 'Arial', sans-serif;
@@ -43,6 +39,7 @@ ol {
 }
 
 header {
+	position: relative;
 	margin: 25px 50px;
 }
 
@@ -56,16 +53,72 @@ header p {
 	margin: 0;
 }
 
-nav ul {
-	display: none;
-/*	display: block;*/
+header nav {
+	position: absolute;
+	bottom: 0;
+	right: 50px;
 }
 
-nav li {
-	display: inline;
-	margin: 0 5px;
-	padding: 3px 5px;
+header nav p {
+	display: inline-block;
+	margin-right: 5px;
+	color: #ccc;
+}
+
+header nav p:after {
+	content: ':';
+}
+
+header nav ul {
+	display: inline-block;
+}
+
+header nav li {
+	position: relative;
+	display: inline-block;
+	margin: 0;
+	padding: 5px 10px;
 	background-color: #eee;
+	border: 1px solid #eee;
+	cursor: pointer;
+}
+
+header nav li + li {
+	margin-left: 1px;
+}
+
+body.brick-view header nav li.tile-view,
+body.tile-view header nav li.brick-view {
+	background-color: #fff;
+	border: 1px dashed #eee;
+}
+
+body.brick-view header nav li.brick-view:before,
+body.tile-view header nav li.tile-view:before {
+	display: block;
+	position: absolute;
+	bottom: -8px;
+	left: 50%;
+	width: 0;
+	height: 0;
+	margin-left: -8px;
+	border-top-width: 8px;
+	border-right-width: 8px;
+	border-bottom-width: 0;
+	border-left-width: 8px;
+	border-color: #eee transparent;
+	border-style: solid;
+	content: '';
+}
+
+nav li:first-child {
+	border-radius: 5px 0 0 5px;
+	-moz-border-radius: 5px 0 0 5px;
+}
+
+nav li:last-child {
+	border-radius: 0 5px 5px 0;
+	-moz-border-radius: 0 5px 5px 0;
 }
 
 section#pics {
@@ -85,12 +138,17 @@ section#pics li {
 	list-style: none;
 }
 
+section#pics li:hover {
+	outline: 8px solid #ccc;
+}
+
 div#more {
 	position: absolute;
+	right: 100px;
 }
 
 div#more input {
-	margin: 0 0 0 50px;
+	margin: 0;
 	padding: 4px 10px 6px;
 	color: #eee;
 	background-color: #555;
@@ -110,6 +168,15 @@ footer {
 	font-family: 'Lucida Grande', sans-serif;
 }
 
+p.no-script {
+	position: absolute;
+	margin: 15px 0 0 40px;
+}
+
+p.no-script span.sign {
+	color: red;
+}
+
 div#loading {
 	display: none;
 	position: fixed;
@@ -121,13 +188,3 @@ div#loading {
 	border-radius: 5px;
 	-moz-border-radius: 5px;
 }
-
-
-
-
-
-
-
-
-
-

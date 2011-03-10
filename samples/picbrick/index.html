@@ -15,21 +15,25 @@
 	<script src="brickmaker.js"></script>
 	<script src="picbrick.js"></script>
 </head>
-<body>
 
+<body class="brick-view">
 <header>
 	<h1>picbrick</h1>
 	<p><a href="http://picplz.com/">picplz</a> interesting pics</p>
 
 	<nav>
+		<!-- <p>view</p> -->
 		<ul>
-			<li onclick="picbrick.view('brick')">brick
-			<li onclick="picbrick.view('tile')">tile
+			<li class="brick-view" onclick="picbrick.view('brick')">brick
+			<li class="tile-view" onclick="picbrick.view('tile')">tile
 		</ul>
 	</nav>
 </header>
 
 <section id="pics">
+<noscript>
+	<p class="no-script"><span class="sign">×</span> require JavaScript</p>
+</noscript>
 <ul></ul>
 </section>
 <div id="more">

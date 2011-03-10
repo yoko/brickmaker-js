@@ -13,6 +13,7 @@ var picbrick = w.picbrick = {
 	lastPicId       : null,
 	setup           : setup,
 	clear           : clear,
+	view            : view,
 	append          : append,
 	makeData        : makeData
 };
@@ -23,7 +24,7 @@ function setup() {
 		picbrick.columnWidth    = 100;
 		picbrick.maxColumnCount = 18;
 		picbrick.picFile        = '100sh';
-		b.addClass('tile-view');
+		b.removeClass().addClass('tile-view');
 	}
 
 	this.container = $('#pics ul');
@@ -57,6 +58,11 @@ function resizeProcess() {
 	if (picbrick.brickmaker.columnCount != column_count) {
 		picbrick.brickmaker.update({columnCount: column_count});
 	}
+}
+
+function view(view) {
+	location.hash = view + '-view';
+	location.reload();
 }
 
 function append() {
