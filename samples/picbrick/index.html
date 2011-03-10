@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>picbrick</title>
+	<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" href="picbrick.css">
+	<script src="http://ajax.microsoft.com/ajax/jquery/jquery-1.5.1.min.js"></script>
+	<script src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
+	<script src="jquery.autopagerevent.js"></script>
+	<script src="brickmaker.js"></script>
+	<script src="jquery.picplz.js"></script>
+	<script src="picbrick.js"></script>
+</head>
+<body>
+
+<header>
+	<h1>picbrick</h1>
+	<p><a href="http://picplz.com/">picplz</a> interesting pics</p>
+
+	<nav>
+		<ul>
+			<li onclick="picbrick.view('brick')">brick
+			<li onclick="picbrick.view('tile')">tile
+		</ul>
+	</nav>
+</header>
+
+<section id="pics">
+<ul></ul>
+</section>
+<div id="more">
+	<input type="button" value="more" onclick="picbrick.append()">
+</div>
+
+<footer>
+	<p>&copy; 2011 <a href="http://flavours.me/yksk">@yksk</a></p>
+	<p>made with <a href="http://dummy/">brickmaker.js and jquery.autopagerevent.js</a></a></p>
+</footer>
+
+<div id="loading"></div>
+
+<script id="template-pic" type="text/x-jquery-tmpl">
+<li style="width:{{= width}}px; height:{{= height}}px">
+<a href="http://picplz.com{{= url}}" target="_blank"><img src="{{= img_url}}" width="{{= width}}" height="{{= height}}"/></a>
+</li>
+</script>
+</body>
+</html>
