@@ -20,11 +20,11 @@ var picbrick = w.picbrick = {
 
 function setup() {
 	b = $('body');
-	if (location.hash == '#tile-view') {
+	if (location.hash == '#grid-view') {
 		picbrick.columnWidth    = 100;
 		picbrick.maxColumnCount = 18;
 		picbrick.picFile        = '100sh';
-		b.removeClass().addClass('tile-view');
+		b.removeClass().addClass('grid-view');
 	}
 
 	this.container = $('#pics ul');

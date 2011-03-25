@@ -87,14 +87,14 @@ header nav li + li {
 	margin-left: 1px;
 }
 
-body.brick-view header nav li.tile-view,
-body.tile-view header nav li.brick-view {
+body.brick-view header nav li.grid-view,
+body.grid-view header nav li.brick-view {
 	background-color: #fff;
 	border: 1px dashed #eee;
 }
 
 body.brick-view header nav li.brick-view:before,
-body.tile-view header nav li.tile-view:before {
+body.grid-view header nav li.grid-view:before {
 	display: block;
 	position: absolute;
 	bottom: -8px;
